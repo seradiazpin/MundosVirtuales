@@ -8,6 +8,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script type='text/javascript' src='js/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap-theme.min.css'>
   </head>
   <body>
     <section class="page-header">
@@ -19,8 +23,60 @@
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="mundos-virtuales" class="anchor" href="#mundos-virtuales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mundos Virtuales</h1>
+
+      <div class="container">
+      <div class="row">
+        <h1>Foro 3 - Mundos Virtuales</h1>
+        <p>
+          Proyecto para mundos virtuales - Sergio Alejandro Diaz Pinilla
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 ">
+          <x3d width='600px' height='400px'>
+            <scene>
+              <viewpoint  position='0 100 0' orientation='0 0 0 0'></viewpoint>
+              <viewpoint id="inicio" position='0 100 0' orientation='0 0 0 0'></viewpoint>
+              <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+              <background skyColor='0.4 0.4 0.5' backUrl='"sky/sea_bk.JPG"' bottomUrl='"sky/sea_dn.JPG"' frontUrl='"sky/sea_ft.JPG"' leftUrl='"sky/sea_lf.JPG"' rightUrl='"sky/sea_rt.JPG"' topUrl='"sky/sea_up.JPG"'></background>
+              <inline url="pissa.x3d"> </inline>
+            </scene>
+          </x3d>
+
+        </div>
+        <div class="col-lg-4 ">
+          <h6>Controles</h6>
+          <ul class="list-group">
+            <li class="list-group-item">
+              Click izquierdo -> Moverce adelante
+            </li>
+            <li class="list-group-item">
+              Click derecho -> Moverce atras
+            </li>
+            <li class="list-group-item">
+              F -> Volar
+            </li>
+            <li class="list-group-item">
+              H -> Helicoptero
+            </li>
+            <li class="list-group-item">
+              T -> Top
+            </li>
+            <li class="list-group-item">
+              E -> Modo inspector
+            </li>
+          </ul>
+          <p>Para aumentar velocidad jalar mas el raton al hacer click</p>
+        </div>
+      </div>
+
+
+      <button  class="btn btn-default" onclick="document.getElementById('inicio').setAttribute('set_bind','true');">Vista inicial</button>
+
+      <div class="row">
+        <a href="http://doc.x3dom.org/tutorials/animationInteraction/navigation/index.html"> Mas controles de camara de x3dom</a>
+      </div>
+      </div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/seradiazpin/MundosVirtuales">Mundosvirtuales</a> is maintained by <a href="https://github.com/seradiazpin">seradiazpin</a>.</span>
@@ -30,6 +86,6 @@
 
     </section>
 
-  
+
   </body>
 </html>
